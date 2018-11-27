@@ -1,6 +1,7 @@
 package com.tulun.src2;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
@@ -42,10 +43,6 @@ public class Pric {
         System.out.println(Arrays.toString(list));
 
 
-        System.out.println(file.length());
-        for (File f : files){
-            System.out.println(f.getName());
-        }
 
 //        System.out.println(file.getAbsolutePath());
 //        try {
@@ -54,6 +51,7 @@ public class Pric {
 //            e.printStackTrace();
 //        }
         searchFile("/Users/liguozheng/Documents/Java","java");
+    //    printfile(new File("./src"),0);
     }
 
     public static void writer(String path,String s){
@@ -113,23 +111,77 @@ public class Pric {
         if (file.listFiles()==null){
             return;
         }
-        getFilesList(file,filter);
+        ArrayList<File> arrayList = new ArrayList();
+        getFilesList(file,filter,arrayList);
+        printTree(arrayList);
     }
 
-    public static void getFilesList(File file, String fileName){
+    public static ArrayList<File> getFilesList(File file, String fileName, ArrayList<File> arrayList){
+
         if(file.exists()){
             if(file.isDirectory()){
                 File[] files = file.listFiles();
                 if(files!=null){
                     for(File f:files){
-                        getFilesList(f,fileName);
+                        getFilesList(f,fileName,arrayList);
                     }
                 }
             }else if(file.isFile()){
                 if(file.getName().contains(fileName)){
-                    System.out.println(file.getPath());
+                    arrayList.add(file);
                 }
             }
         }
+        return arrayList;
+    }
+
+    public static void printTree(ArrayList<File> arrayList){
+
+        String s = "";
+        for (int i = 0; i <arrayList.size() ; i++) {
+
+            if (i==0){
+                s = arrayList.get(i).getParent();
+                System.out.println(arrayList.get(i).getPath());
+            }else {
+
+                String same = isSame(s, arrayList.get(i).getPath());
+                s= arrayList.get(i).getParent();
+                String s2 = chengPrint(same);
+                String s1 = arrayList.get(i).getPath().replaceAll(same, s2);
+                System.out.println(s1);
+            }
+        }
+    }
+
+
+    public static String isSame(String s1,String s2){
+
+        String l ;
+        String s;
+
+        if (s1.length()<=s2.length()){
+            s = s1;
+            l = s2;
+        }else {
+            s = s2;
+            l = s1;
+        }
+        StringBuilder s3 = new StringBuilder();
+        for (int i = 0; i <s.length() ; i++) {
+            if (s1.charAt(i)==s2.charAt(i)){
+                s3.append(s1.charAt(i));
+            }
+        }
+        return s3.length()==0 ? null: s3.toString();
+    }
+
+    public static String chengPrint(String s){
+
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i = 0; i < s.length(); i++) {
+            stringBuilder.append(' ');
+        }
+        return stringBuilder.toString();
     }
 }
