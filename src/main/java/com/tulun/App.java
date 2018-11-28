@@ -14,11 +14,14 @@ public class App {
 
     public static void main(String[] args) {
 
-        String a = "aabbccc";
-        String b = "";
-        String same = isSame(a,b);
+//        String a = "aabbccc";
+//        String b = "";
+//        String same = isSame(a,b);
+//
+//        System.out.println(same);
 
-        System.out.println(same);
+        String s = "1";
+        System.out.println((int)s.charAt(0));
     }
 
     public static void printTree(ArrayList<File> arrayList){
