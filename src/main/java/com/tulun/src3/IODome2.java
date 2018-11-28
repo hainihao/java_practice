@@ -24,7 +24,7 @@ public class IODome2 {
   //      find(BufferReader("/Users/liguozheng/Documents/Linux/test.txt"));
 
         String path = "/Users/liguozheng/Documents/Linux/test.txt";
-        objectTest(path);
+
 
     }
 
@@ -163,23 +163,5 @@ public class IODome2 {
         }
     }
 
-    public static void objectTest(String path){
-        FileInputStream fileInputStream = null;
-        ObjectInputStream objectInputStream = null;
 
-        try {
-            fileInputStream = new FileInputStream(path);
-            objectInputStream = new ObjectInputStream(fileInputStream);
-            int len ;
-            while ((len = objectInputStream.readChar())!=-1){
-                System.out.println((char)len);
-            }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-
-    }
 }
