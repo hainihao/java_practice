@@ -23,7 +23,9 @@ public class IODome2 {
 //        findSame(path1,path2);
   //      find(BufferReader("/Users/liguozheng/Documents/Linux/test.txt"));
 
-        String path = "/Users/liguozheng/Documents/Linux/test.txt";
+        String path = "/Users/liguozheng/Documents/Linux/test1.txt";
+
+        bufferInputStream(path);
 
 
     }
@@ -38,14 +40,23 @@ public class IODome2 {
             bufferedInputStream = new BufferedInputStream(fileInputStream);
 
             //标记当前位置
-            bufferedInputStream.mark(14);
+            //bufferedInputStream.mark(14);
             //重置标记位置
-            bufferedInputStream.reset();
+            //bufferedInputStream.reset();
             //判断是否支持标记
-            bufferedInputStream.markSupported();
+            //bufferedInputStream.markSupported();
 
             //读
-            bufferedInputStream.read();
+            int len;
+            long start = System.currentTimeMillis();
+            while ((len = bufferedInputStream.read())!=-1){
+                System.out.print((char)len);
+            }
+
+            System.out.println();
+            System.out.println();
+            long end = System.currentTimeMillis();
+            System.out.println(end - start);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
