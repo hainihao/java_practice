@@ -8,7 +8,6 @@ import java.nio.charset.Charset;
 import java.nio.charset.CharsetDecoder;
 import java.nio.charset.CharsetEncoder;
 import java.util.Iterator;
-import java.util.Map;
 import java.util.SortedMap;
 
 /**
