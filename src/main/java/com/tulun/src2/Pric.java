@@ -59,7 +59,6 @@ public class Pric {
         try {
             fileWriter  = new FileWriter(path);
             fileWriter.write(s);
-      //      fileWriter.append('p');
         } catch (IOException e) {
             e.printStackTrace();
         }finally {
