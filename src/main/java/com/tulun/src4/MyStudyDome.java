@@ -1,7 +1,6 @@
 package com.tulun.src4;
 
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 
 /**
  * @author:liguozheng
@@ -14,16 +13,46 @@ public class MyStudyDome {
     public static void main(String[] args) {
 
         String path = "/Users/liguozheng/Documents/Linux/nibuhao.txt";
+        printDome(path);
+        LineDome(path);
+    }
+
+    public static void printDome(String path){
         FileWriter fileWriter = null;
         try {
-            fileWriter = new FileWriter(path);
-            fileWriter.write("你是不是傻\n");
-            fileWriter.write("yes,you are shabi");
+            fileWriter = new FileWriter(path,true);
+            fileWriter.write("wasdkasljdasl dansjndklajs dnjaskndk");
         } catch (IOException e) {
             e.printStackTrace();
         }finally {
             try {
                 fileWriter.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public static void LineDome(String path){
+
+        LineNumberReader lineNumberReader = null;
+        try {
+            lineNumberReader = new LineNumberReader(new FileReader(path));
+            int lineNumber = lineNumberReader.getLineNumber();
+            System.out.println(lineNumber);
+            String len ;
+            while ((len = lineNumberReader.readLine())!=null){
+                System.out.println(len);
+                int lineNumber1 = lineNumberReader.getLineNumber();
+                System.out.println(lineNumber1);
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }finally {
+            try {
+                lineNumberReader.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }

@@ -1,9 +1,6 @@
 package com.tulun.src4;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.RandomAccessFile;
+import java.io.*;
 
 /**
  * @author:liguozheng
@@ -14,10 +11,10 @@ import java.io.RandomAccessFile;
 
 public class RamdonFileDome {
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
 
         String path = "/Users/liguozheng/Documents/Linux/nibuhao.txt";
-        inPut(path);
+   //     inPut(path);
         //reader(path);
     }
 
@@ -48,4 +45,6 @@ public class RamdonFileDome {
             e.printStackTrace();
         }
     }
+
+
 }
