@@ -30,6 +30,12 @@
           return lineNumber;
       }
   
+  3.设置标记
+  public void mark(int readAheadLimit){}
+  
+  4.回到标记
+   public void reset(){}
+  
   ```
   ####用法（以getLineNumber()为例）：
   ```
