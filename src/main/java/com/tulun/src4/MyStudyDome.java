@@ -8,19 +8,20 @@ import java.io.*;
  * @time:19:33
  * @description:
  */
+@SuppressWarnings("all")
 public class MyStudyDome {
 
     public static void main(String[] args) {
 
         String path = "/Users/liguozheng/Documents/Linux/nibuhao.txt";
-        printDome(path);
+//        printDome(path);
         LineDome(path);
     }
 
     public static void printDome(String path){
         FileWriter fileWriter = null;
         try {
-            fileWriter = new FileWriter(path,true);
+            fileWriter = new FileWriter(path);
             fileWriter.write("wasdkasljdasl dansjndklajs dnjaskndk");
         } catch (IOException e) {
             e.printStackTrace();
@@ -36,16 +37,26 @@ public class MyStudyDome {
     public static void LineDome(String path){
 
         LineNumberReader lineNumberReader = null;
+
         try {
+
             lineNumberReader = new LineNumberReader(new FileReader(path));
             int lineNumber = lineNumberReader.getLineNumber();
+
             System.out.println(lineNumber);
             String len ;
+
             while ((len = lineNumberReader.readLine())!=null){
                 System.out.println(len);
                 int lineNumber1 = lineNumberReader.getLineNumber();
+
+                if(lineNumber1==3){
+                    lineNumberReader.setLineNumber(10);
+                }
+
                 System.out.println(lineNumber1);
             }
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
