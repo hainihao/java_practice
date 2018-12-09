@@ -8,14 +8,14 @@ import java.io.*;
  * @time:11:48
  * @description:
  */
-
+@SuppressWarnings("all")
 public class RamdonFileDome {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
 
         String path = "/Users/liguozheng/Documents/Linux/nibuhao.txt";
-   //     inPut(path);
-        //reader(path);
+        inPut(path);
+        reader(path);
     }
 
     public static void reader(String path){
