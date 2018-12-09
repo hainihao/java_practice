@@ -10,6 +10,7 @@ import java.io.Serializable;
  * @time:21:11
  * @description:
  */
+@SuppressWarnings("all")
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
