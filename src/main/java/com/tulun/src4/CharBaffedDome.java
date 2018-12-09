@@ -16,7 +16,7 @@ import java.util.SortedMap;
  * @time:11:13
  * @description:
  */
-
+@SuppressWarnings("all")
 public class CharBaffedDome {
 
     public static void main(String[] args) throws CharacterCodingException {
