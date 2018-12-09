@@ -8,13 +8,13 @@ import java.io.*;
  * @time:19:06
  * @description:
  */
-
+@SuppressWarnings("all")
 public class IODome5 {
 
     public static void main(String[] args) throws IOException {
 
         String path = "/Users/liguozheng/Documents/Linux/nibuhao.txt";
-     //   randomFile(path,"sadasdasdasdaea");
+        randomFile(path,"sadasdasdasdaea");
         inster(3,path,"99999");
 
 
