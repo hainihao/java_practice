@@ -8,7 +8,7 @@ import java.util.Scanner;
  * @time:12:59
  * @description:
  */
-
+@SuppressWarnings("all")
 public class Until {
 
     Player player1;
