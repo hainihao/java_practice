@@ -70,7 +70,8 @@ public class Until {
         System.out.println("     1.开始        ");
         System.out.println("     2.退出       ");
         System.out.println("                   ");
-        System.out.println("请输入标号：");
+        System.out.println("                      ");
+        System.out.println("请输入标号：          ");
     }
 
     public Player countWon(Player player1,Player player2){
