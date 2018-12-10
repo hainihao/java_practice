@@ -31,6 +31,7 @@ public class CharBaffedDome {
         try {
             InputStreamReader inputStreamReader = new InputStreamReader(new FileInputStream(path));
            // InputStreamReader inputStreamReader1 = new InputStreamReader(inputStreamReader);
+
             Charset charset = Charset.defaultCharset();
             SortedMap<String, Charset> stringCharsetSortedMap = Charset.availableCharsets();
             Iterator<Charset> iterator = stringCharsetSortedMap.values().iterator();
