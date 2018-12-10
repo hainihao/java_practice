@@ -1,5 +1,8 @@
 package com.tulun.finger_guessingame;
 
+import lombok.Data;
+import org.junit.Test;
+
 /**
  * @author:liguozheng
  * @Date:2018/12/8
@@ -12,5 +15,11 @@ public class TestMain {
     public static void main(String[] args) {
         Until until = new Until();
         until.start();
+    }
+
+    @Test
+    public void test1(){
+
+
     }
 }
