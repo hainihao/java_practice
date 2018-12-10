@@ -1,10 +1,6 @@
 package com.tulun.src6;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.Synchronized;
 import lombok.ToString;
-
 import java.util.concurrent.locks.Lock;
 
 /**
@@ -13,7 +9,7 @@ import java.util.concurrent.locks.Lock;
  * @time:21:27
  * @description:
  */
-
+@SuppressWarnings("all")
 public class DxtendDome {
 
     public static void main(String[] args) {
@@ -37,6 +33,7 @@ class thread1 implements Runnable {
 }
 
 
+@SuppressWarnings("all")
 @ToString
 class Student{
 
