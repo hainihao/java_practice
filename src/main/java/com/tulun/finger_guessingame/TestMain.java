@@ -6,7 +6,7 @@ package com.tulun.finger_guessingame;
  * @time:13:06
  * @description:
  */
-
+@SuppressWarnings("all")
 public class TestMain {
 
     public static void main(String[] args) {

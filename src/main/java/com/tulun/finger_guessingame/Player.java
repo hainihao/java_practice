@@ -8,7 +8,7 @@ import lombok.*;
  * @time:12:57
  * @description:
  */
-
+@SuppressWarnings("all")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
