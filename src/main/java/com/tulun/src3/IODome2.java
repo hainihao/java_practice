@@ -17,11 +17,11 @@ public class IODome2 {
 
     public static void main(String[] args) {
 
-//        String path1 = "/Users/liguozheng/Documents/Linux/ok.txt";
-//        String path2 = "/Users/liguozheng/Documents/Linux/nibuhao.txt";
-//
-//        findSame(path1,path2);
-  //      find(BufferReader("/Users/liguozheng/Documents/Linux/test.txt"));
+        String path1 = "/Users/liguozheng/Documents/Linux/ok.txt";
+        String path2 = "/Users/liguozheng/Documents/Linux/nibuhao.txt";
+
+        findSame(path1,path2);
+        find(BufferReader("/Users/liguozheng/Documents/Linux/test.txt"));
 
         String path = "/Users/liguozheng/Documents/Linux/test1.txt";
 
