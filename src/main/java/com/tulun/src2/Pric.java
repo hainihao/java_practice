@@ -78,9 +78,10 @@ public class Pric {
 
         try {
             fileReader = new FileReader(path);
-//            char[] bety = new char[100];
-//            fileReader.read(bety);
-//            System.out.println(bety);
+            char[] bety = new char[100];
+            fileReader.read(bety);
+
+            System.out.println(bety);
             int len;
             while ((len = fileReader.read())!=-1){
                 s.append((char)len);
