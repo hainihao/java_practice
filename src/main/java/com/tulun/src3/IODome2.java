@@ -13,6 +13,7 @@ import java.util.*;
 /**
  * 缓存
  */
+@SuppressWarnings("all")
 public class IODome2 {
 
     public static void main(String[] args) {
