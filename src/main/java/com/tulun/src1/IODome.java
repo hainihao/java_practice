@@ -24,7 +24,7 @@ public class IODome {
 ////            byte[] bytes = new byte[100];
 ////            fileInputStream.read(bytes);
 ////            System.out.println(Arrays.toString(bytes));
-//            int i ;
+            int i ;
             long start = System.currentTimeMillis();
             while ((i = fileInputStream.read())!=-1){
                 System.out.print((char)i);
