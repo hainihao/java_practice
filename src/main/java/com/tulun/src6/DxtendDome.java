@@ -1,7 +1,7 @@
 package com.tulun.src6;
 
-import lombok.ToString;
-import java.util.concurrent.locks.Lock;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * @author:liguozheng
@@ -13,85 +13,19 @@ import java.util.concurrent.locks.Lock;
 public class DxtendDome {
 
     public static void main(String[] args) {
-        dome1();
+
+        RunnableThread01 runableThread01 = new RunnableThread01();
+        Thread thread = new Thread(runableThread01);
+        thread.start();
+        System.out.println("main thread ...");
+
+        ExtendsThread01 extendsThread01 = new ExtendsThread01();
+        extendsThread01.start();
+
+        ExecutorService executorService = Executors.newSingleThreadExecutor();
+
 
     }
 
-    public static void dome1(){
-
-    }
 }
 
-class thread1 implements Runnable {
-
-
-
-    @Override
-    public void run() {
-
-    }
-}
-
-
-@SuppressWarnings("all")
-@ToString
-class Student{
-
-    private int id;
-    private String name;
-    private int age;
-    private int[] score;
-    private Lock stuLock;
-
-    public Student() {
-        this(7);
-    }
-
-    private Student(int size) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-        this.score = new int[size];
-    }
-
-    public int getId() {
-
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public int[] getScore() {
-        return score;
-    }
-
-    public synchronized void setScore(int[] score) {
-        this.score = score;
-    }
-
-    public Lock getStuLock() {
-        return stuLock;
-    }
-
-    public void setStuLock(Lock stuLock) {
-        this.stuLock = stuLock;
-    }
-}
