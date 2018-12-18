@@ -11,6 +11,6 @@ public class ExtendsThread01 extends Thread{
 
     @Override
     public synchronized void start() {
-        System.out.println("ExtendsTread01  ....");
+        System.out.println(Thread.currentThread().getName()+"  "+Thread.currentThread().getId());
     }
 }

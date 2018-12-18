@@ -12,6 +12,6 @@ public class RunnableThread01 implements Runnable{
     @Override
     public void run() {
 
-        System.out.println("thread ....");
+        System.out.println(Thread.currentThread().getName()+"  " +Thread.currentThread().getId());
     }
 }
