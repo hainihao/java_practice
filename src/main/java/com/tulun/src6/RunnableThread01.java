@@ -12,6 +12,14 @@ public class RunnableThread01 implements Runnable{
     @Override
     public void run() {
 
-        System.out.println(Thread.currentThread().getName()+"  " +Thread.currentThread().getId());
+
+        System.out.println(Thread.currentThread().getName()+"  " +Thread.currentThread().getId()+"   start");
+
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println(Thread.currentThread().getName()+"  " +Thread.currentThread().getId()+"    end");
     }
 }
